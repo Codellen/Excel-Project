@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div id="display">
+                    <input type="text" name="display" id="content">
+                </div>
+                <div class="row 1">
+                    <input type="button" value="AC" id="btn" style="color:#33ffd8;">
+                    <input type="button" value="DE" id ="btn"  style="color:#33ffd8;" onclick="display.value = display.value.toString().slice(0,-1)">
+                    <input type="button" value="." id ="btn" style="color:#33ffd8;"  onclick="display.value +='.'">
+                    <input type="button" value="/" id ="btn" style="color:#33ffd8;" onclick="display.value +='/ '">
+                </div>
+                <div class="row 2">
+                    <input type="button" value="7" id="btn" onclick="display.value +='7'">
+                    <input type="button" value="8" id="btn"  onclick="display.value +='8'">
+                    <input type="button" value="9" id="btn"  onclick="display.value +='9'">
+                    <input type="button" value="*" id="btn"  onclick="display.value += '*'" style="color:#33ffd8;">
+                </div>
+                <div class="row 3">
+                    <input type="button" value="4" id="btn"  onclick="display.value +='4'">
+                    <input type="button" value="5" id="btn"  onclick="display.value +='5'">
+                    <input type="button" value="6" id="btn"  onclick="display.value +='6'">
+                    <input type="button" value="-" id="btn"  onclick="display.value += '-'" style="color:#33ffd8;">
+                </div>
+                <div class="row 4">
+                    <input type="button" value="1" id="btn" onclick="display.value +='1'">
+                    <input type="button" value="2" id="btn" onclick="display.value +='2'">
+                    <input type="button" value="3" id="btn" onclick="display.value +='3'">
+                    <input type="button" value="+" id="btn" onclick="display.value +='+'" style="color:#33ffd8;">
+                </div>
+                <div class="row 5">
+                    <input type="button" value="00" id="btn" onclick="display.value +='00'">
+                    <input type="button" value="0" id="btn" onclick="display.value +='0'">
+                    <input type="button" value="=" id="equal btn" onclick="display.value = eval(display.value)">
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
