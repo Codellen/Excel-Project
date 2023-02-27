@@ -266,10 +266,118 @@ let propUnder = document.getElementById('under');
             }
         })
     })
+//center align
+let propCenter = document.getElementById('center');
+    propCenter.addEventListener('click',function(){
+        let cellularElement = document.querySelectorAll('.inout'); 
+        cellularElement.forEach(function(ele){
+           if(propCenter.classList.contains('selected-icon'))
+           {
+            if(ele.classList.contains('sel'))
+            {
+                ele.style.textAlign="center"
+            }
+        
+           }
+           
+        })
+    })
+
+//right align
+let propRight = document.getElementById('right');
+    propRight.addEventListener('click',function(){
+        let cellularElement = document.querySelectorAll('.inout'); 
+        cellularElement.forEach(function(ele){
+           if(propRight.classList.contains('selected-icon'))
+           {
+            if(ele.classList.contains('sel'))
+            {
+                ele.style.textAlign="right"
+            }
+        
+           }
+          
+        })
+    })
+
+//left align
+let propLeft = document.getElementById('left');
+    propLeft.addEventListener('click',function(){
+        let cellularElement = document.querySelectorAll('.inout'); 
+        cellularElement.forEach(function(ele){
+           if(propLeft.classList.contains('selected-icon'))
+           {
+            if(ele.classList.contains('sel'))
+            {
+                ele.style.textAlign="left"
+            }
+        
+           }
+          
+        })
+    })
+
+//color-picker and text-picker
+let clrPick = document.getElementById('color-icon');
+let textClrPick = document.getElementById('text-icon')
+let actualClr = document.getElementById('colorpicked')
+clrPick.addEventListener('click',function(){
+clrPick = actualClr.click();//when click on material icon fill(container) it also give same option as input typr color gives
+
+})
+textClrPick.addEventListener('click',function(){
+    textClrPick = actualClr.click();//when click on material icon fill(container) it also give same option as input typr color gives
+    
+    })
 
 
+     actualClr = document.getElementById('colorpicked')
+     actualClr.addEventListener('change',function(){
+        let colorCell = document.querySelectorAll('.inout'); 
+        colorCell.forEach(function(ele){
+            if(ele.classList.contains('sel'))
+            {
+                ele.style.backgroundColor = actualClr.value;
 
+            }
+           
+        })
+     })
+     let textListner = document.getElementById('textpicked');
+     textListner.addEventListener('change',function(){
+        let colorCell = document.querySelectorAll('.inout'); 
+        colorCell.forEach(function(ele){
+            if(ele.classList.contains('sel'))
+            {
+                ele.style.color = textListner.value;
 
+            }
 
+        })
+     })
 
+     //set font size anf font family
+     let fontListner = document.getElementById('fontoption');
+     fontListner.addEventListener('change',function(){
+        let colorCell = document.querySelectorAll('.inout'); 
+        colorCell.forEach(function(ele){
+            if(ele.classList.contains('sel'))
+            {
+                ele.style.fontFamily = fontListner.value;
 
+            }
+
+        })
+     })
+     let sizeListner = document.getElementById('sizeoption');
+     sizeListner.addEventListener('change',function(){
+        let colorCell = document.querySelectorAll('.inout'); 
+        colorCell.forEach(function(ele){
+            if(ele.classList.contains('sel'))
+            {
+                ele.style.fontSize = sizeListner.value;
+
+            }
+
+        })
+     })

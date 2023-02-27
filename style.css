@@ -73,7 +73,9 @@ body{
      width:150px;
 }
 .font-size-selector{
-    height: 70%;;
+    height: 70%;
+    margin-left: 8px;
+
 }
 .selection option{
     font-size: 17px;
@@ -176,6 +178,8 @@ option:hover{
     border-bottom:1px solid lightgray;
     overflow: hidden;
     outline-color: #107c41;
+    font-size: 14px;
+    font-family: 'Noto Sans';
     
 }
 .sel{
@@ -224,4 +228,18 @@ border-bottom: 1px solid lightgray;
 }
 .left-cell-selected{
     border-left: none;
+}
+.icon-fillcolor,.icon-filltext{
+    position:relative;
+
+}
+.color-picker{
+    position:absolute;
+    width:26px;
+    height:12px;
+    border:none;
+    padding:0px;
+    top:29px;
+    left:14px;
+    cursor: pointer;
 }
