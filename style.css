@@ -1,3 +1,227 @@
+body{
+    margin:0px;
+    overflow: hidden;
+    font-size: 14px;;
+}
+*{
+    box-sizing: border-box;  
+}
 .container{
     height:100vh;
+    
+   
+}
+.title-bar{
+    height:5vh;
+   background-color: #107c41;
+   display:flex;
+   color:#fff;
+   justify-content: center;
+   align-items: center;
+
+} 
+.menu-bar{
+    height:5vh;
+    background-color: #107c41;
+    display:flex;
+   color:#fff;
+    font-size: 16px;
+   
+}
+.menu-item{
+    padding-left: 10px;
+    padding-right:10px;
+    display:flex;
+    align-items: center;
+}
+.menu-item:hover{
+    cursor:pointer;
+    background-color: #0c5e31;
+
+}
+.menu-item.selected:hover{
+    cursor:default;
+}
+.menu-item.selected{
+ background-color: #fff;
+ color:#107c41;
+}
+.menu-icon-bar{
+ height:6vh;
+ background-color: rgb(241, 241, 241);
+ display:flex;
+ align-items: center;
+ 
+
+
+}
+.menu-icon{
+    padding-left:15px;
+    padding-right:15px;
+    height:100%;
+    display:flex;
+ align-items:center;
+
+}
+.menu-icon:hover{
+    cursor:pointer;
+    background-color: lightgray;
+}
+.font-family-selector{
+    height:70%;
+    font-size: 17px;;
+     width:150px;
+}
+.font-size-selector{
+    height: 70%;;
+}
+.selection option{
+    font-size: 17px;
+}
+option:hover{
+    cursor:pointer;
+    background-color: lightgray;
+}
+.formula-bar{
+ height:5vh; 
+  display:flex;
+ align-items: center;
+ padding-left:0.7rem;
+ padding-right:0.7rem;
+ background-color: rgb(241, 241, 241);
+}
+.data-container{
+    height:75vh;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.select-All{
+    width:30px;
+    height:30px;
+    border:1px solid lightgray;
+}
+.column-name-container{
+ width:calc(100vw - 30px);
+ height:30px;
+ border:1px solid lightgray;
+ display: flex;
+ overflow: hidden;
+}
+.row-name-container{
+ width:30px;
+ height:calc(75vh - 30px);
+ border:1px solid lightgray;
+ overflow: hidden;
+}
+.input-cell-container{
+    width:calc(100vw - 30px);
+    height:calc(75vh - 30px);
+    border:1px solid lightgray;
+    overflow: scroll;
+}
+.sheet-bar{
+    height:4vh;
+     display:flex;
+     align-items: center;
+}
+.left-arrow,.right-arrow{
+    font-size: 30px;
+}
+.left-arrow:hover,.right-arrow:hover{
+    cursor:pointer;
+    background-color: lightgray;
+}
+.add{
+    color:#107c41;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.add:hover{
+    cursor:pointer;
+    transform:scale(1.25);
+}
+.sheetnumber{
+    border-bottom: 4px solid #107c41;
+    font-weight: 600;
+}
+.sheettab-container{
+    border: 1px solid lightgray;
+    padding:5px;
+  
+}
+.column-name{
+    min-width:100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid lightgray;
+    font-weight: bold;
+}
+.row-name{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:25px;
+    border-bottom:1px solid lightgray;
+  
+}
+.row-cell{
+    display:flex;
+}
+.input-cell{
+    min-width:100px;
+    min-height:25px;
+    border-right:1px solid lightgray;
+    border-bottom:1px solid lightgray;
+    overflow: hidden;
+    outline-color: #107c41;
+    
+}
+.sel{
+    border:2px solid #107c41; 
+}
+.formula-editor{
+    height:70%;
+    border:1px solid lightgray;
+    background-color: #fff;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    display: flex;
+    align-items: center;
+    
+}
+.selected-cell{
+    width:120px;
+}
+.function-sign{
+    width:40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+} 
+.formula-input{
+    width:calc(100vw - 160px);
+  outline-color: #107c41;
+}
+img{
+    
+    width:16px;
+    height:16px;
+    margin: 10px;
+}
+.menu-icon.selected-icon{
+    background-color: lightgray;
+}
+.top-cell-selected{
+ border-top: none;
+}
+.bottom-cell-selected{
+border-bottom: 1px solid lightgray;
+}
+.right-cell-selected{
+    border-right: 1px solid lightgray;
+}
+.left-cell-selected{
+    border-left: none;
 }

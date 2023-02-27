@@ -4,21 +4,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Excek Clone</title>
+    <title>Excel Clone</title>
 </head>
 <body>
     <div class="container">
-        <div class="title-bar"></div>
-        <div class="menu-bar"></div>
-        <div class="menu-icon-bar"></div>
-        <div class="formula-bar"></div>
-        <div class="data-container">
-            <div class="row-name-container"></div>
-            <div class="column-name-container"></div>
-            <div class="input-cell-container"></div>
+        <div class="title-bar">Excel-Book1</div>
+        <div class="menu-bar">
+            <div class="menu-file menu-item">File</div>
+            <div class="menu-home selected menu-item"> Home</div>
+            <div class="menu-insert menu-item">Insert</div>
+            <div class="menu-pagelayout menu-item">PageLayout</div>
+            <div class="menu-formulas menu-item">Formulas</div>
+            <div class="menu-data menu-item">Data</div>
+            <div class="menu-Review menu-item">Review</div>
+            <div class="menu-view menu-item">View</div>
+           
         </div>
-        <div class="sheet-bar"></div>
+        <div class="menu-icon-bar">
+            <div class="material-icons menu-icon icon-cut">content_cut</div>
+            <div class="material-icons  menu-icon icon-copy">content_copy</div>
+            <div class="material-icons  menu-icon icon-paste">content_paste</div>
+            <select class="selection font-family-selector">
+                <option style="font-family: Noto Sans;" value="Noto Sans">Noto Sans</option>
+                <option style="font-family:Arial" value="Arial">Arial</option>
+                <option style="font-family:Calibri" value="Calibri">Calibri</option>
+                <option style="font-family:Comic Sans MS" value="Comic Sans MS">Comic Sans MS</option>
+                <option style="font-family:Courier New" value="Courier New">Courier New</option> 
+                <option style="font-family: Impact" value="Impact">Impact</option>
+                <option style="font-family: Georgia" value="Georgia">Georgia</option>
+                <option style="font-family:Garamond" value="Garamond">Garamond</option>
+                <option style="font-family: Lang" value="Lato">Lato</option>
+                <option style="font-family:Open Sans" value="Open Sans">Open Sans</option>
+                <option style="font-family:Palatino" value="Palatino">Palatino</option>
+                <option style="font-family:Verdana" value="Verdana">Verdana</option>
+            </select>
+            <select class="selection font-size-selector">
+                <option value="'10">10</option>
+                <option value="'12">12</option>
+                <option value="'14">14</option>
+                <option value="'16">16</option>
+                <option value="'20">20</option>
+                <option value="'22">22</option>
+                <option value="'24">24</option>
+                <option value="'26">26</option>
+                <option value="'28">28</option>
+                <option value="'30">30</option>
+                <option value="'32">32</option>
+
+            </select>
+            <div class="material-icons menu-icon icon-bold" id="bold">format_bold</div>
+            <div class="material-icons menu-icon icon-italics" id="italic">format_italic</div>
+            <div class="material-icons menu-icon icon-underline" id="under">format_underline</div>
+            <div class="material-icons menu-icon icon-left selected-icon align-items" id="left">format_align_left</div>
+            <div class="material-icons menu-icon icon-center align-items align-items" id="center">format_align_center</div>
+            <div class="material-icons menu-icon icon-right align-itemsalign-items" id="right">format_align_right</div>
+            <div class="material-icons menu-icon icon-fillcolor">format_color_fill</div>
+            <div class="material-icons menu-icon icon-filltext">format_color_text</div>
+            
+        </div>
+        <div class="formula-bar">
+             <div class="formula-editor selected-cell"></div>
+             <div class="function-sign">
+                <img src="data:image/png;base64,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">
+             </div>
+             <div class="formula-editor formula-input" contenteditable="true"></div>
+
+        </div>
+        <div class="data-container">
+            <div class="select-All"></div>
+            <div class="column-name-container" id="column-container">
+                
+            </div>
+           
+            <div class="row-name-container" id="row-container">
+                
+            </div>
+            <div class="input-cell-container" id ="inputcell">
+                
+            </div>
+        </div>
+        <div class="sheet-bar">
+            <div class="Scroller">
+                <div class="material-icons left-arrow">arrow_left</div>
+                <div class="material-icons right-arrow">arrow_right</div>
+            </div>
+            <div class="material-icons add">add_circle</div>
+            <div class="sheettab-container">
+                <div class="sheetnumber">Sheet1</div>
+            </div>
+        </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
